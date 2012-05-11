@@ -15,7 +15,7 @@
   UISplitViewController *splitViewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
+@property (nonatomic) IBOutlet UIWindow *window;
+@property (nonatomic) IBOutlet UISplitViewController *splitViewController;
 
 @end

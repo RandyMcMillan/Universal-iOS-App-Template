@@ -74,11 +74,6 @@
 }
 
 
-- (void)dealloc {
-	[window release];
-  [splitViewController release];
-	[super dealloc];
-}
 
 
 @end

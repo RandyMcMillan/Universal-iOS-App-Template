@@ -32,12 +32,5 @@
   return self;
 }
 
-- (void)dealloc {
-  
-  [firstDetail release];
-  [secondDetail release];
-  
-  [super dealloc];
-}
 
 @end

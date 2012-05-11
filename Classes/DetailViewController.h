@@ -9,14 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Model.h"
 
-@interface DetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface DetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-  UITableView *tblView;
-  NSArray *subcategories;
-}
-
-@property (nonatomic, retain) UITableView *tblView;
-@property (nonatomic, retain) NSArray *subcategories;
+@property (nonatomic, strong) UITableView *tblView;
+@property (nonatomic, copy) NSArray *subcategories;
 
 - (void)populateTable;
 

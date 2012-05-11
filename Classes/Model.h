@@ -14,7 +14,7 @@
   NSArray *secondDetail;
 }
 
-@property (nonatomic, retain) NSArray *firstDetail;
-@property (nonatomic, retain) NSArray *secondDetail;
+@property (nonatomic) NSArray *firstDetail;
+@property (nonatomic) NSArray *secondDetail;
 
 @end

@@ -30,9 +30,6 @@
   return YES;
 }
 
-- (void)dealloc {
-  [super dealloc]; 
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   
@@ -40,7 +37,6 @@
   
   [self.navigationController pushViewController:subDetail animated:YES];
 
-  [subDetail release];
 }
 
 @end

@@ -11,8 +11,5 @@
 #import "RootViewController.h"
 #import "DetailViewController_Pad.h"
 
-@interface RootViewController_Pad : RootViewController {
-
-}
-
+@interface RootViewController_Pad : RootViewController
 @end

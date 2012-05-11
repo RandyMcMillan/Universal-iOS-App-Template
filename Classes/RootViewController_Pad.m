@@ -25,14 +25,9 @@
   } else {
     detailViewController.subcategories = model.secondDetail;
   }
-  
-  [model release];
 
   [detailViewController populateTable];
 }
 
-- (void)dealloc {
-  [super dealloc];
-}
 
 @end

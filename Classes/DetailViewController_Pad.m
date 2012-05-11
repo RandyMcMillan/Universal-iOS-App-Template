@@ -10,7 +10,7 @@
 
 
 @interface DetailViewController_Pad()
-  @property (nonatomic, retain) UIPopoverController *popoverController;
+  @property (nonatomic, strong) UIPopoverController *popoverController;
 @end
 
 @implementation DetailViewController_Pad
@@ -18,11 +18,6 @@
 @synthesize toolbar;
 @synthesize popoverController;
 
-- (void)dealloc {
-  [toolbar release];
-  [popoverController release];
-  [super dealloc];
-}
 
 - (void)viewDidLoad {
   
@@ -33,7 +28,7 @@
   [super viewDidLoad];
 
   self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
-  self.toolbar                     = [[[UIToolbar alloc] initWithFrame:CGRectZero] autorelease];
+  self.toolbar                     = [[UIToolbar alloc] initWithFrame:CGRectZero];
   
   CGRect tbFrame;
   CGRect tblFrame;
@@ -60,9 +55,6 @@
   nav.modalPresentationStyle = UIModalPresentationPageSheet;
   
   [self presentModalViewController:nav animated:YES];
-  
-  [subDetail release];
-  [nav release];
 }
 
 - (void)viewDidUnload {

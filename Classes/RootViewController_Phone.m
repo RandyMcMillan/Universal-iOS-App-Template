@@ -23,11 +23,7 @@
     detail.subcategories = model.secondDetail;
   }
 
-  [model release];
-
-  [self.navigationController pushViewController:detail animated:YES];
-  
-  [detail release];
+  [self.navigationController pushViewController:detail animated:YES]; 
 }
 
 @end

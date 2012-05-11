@@ -10,8 +10,5 @@
 #import "DetailViewController.h"
 #import "SubDetailViewController_iPhone.h"
 
-@interface DetailViewController_Phone : DetailViewController {
-
-}
-
+@interface DetailViewController_Phone : DetailViewController
 @end

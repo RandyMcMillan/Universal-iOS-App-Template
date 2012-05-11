@@ -13,11 +13,6 @@
 @synthesize tblView;
 @synthesize subcategories;
 
-- (void)dealloc {
-  [tblView release];
-  [subcategories release];
-  [super dealloc];
-}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -26,14 +21,13 @@
   
   UIView *mainParentView = [[UIView alloc] initWithFrame:CGRectZero];
   
-  self.tblView = [[[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain] autorelease];
+  self.tblView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
   
   self.tblView.dataSource = self;
   self.tblView.delegate   = self;
   
   self.view = mainParentView;
 
-  [mainParentView release];
   
   [self.view addSubview:self.tblView];
 
@@ -74,7 +68,7 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   if (cell == nil) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
   }
     
   cell.textLabel.text = [[self.subcategories objectAtIndex:indexPath.row] objectForKey:@"name"];
@@ -105,12 +99,11 @@
     Model *subcats = [[Model alloc] init];
     
     self.subcategories = subcats.firstDetail;
-    
-    [subcats release];
-    
+
     [self.tblView reloadData];
 
   } else {
+
     [self.tblView reloadData];
   }
 }

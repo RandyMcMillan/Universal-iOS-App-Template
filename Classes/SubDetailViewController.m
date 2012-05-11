@@ -14,24 +14,18 @@
 @synthesize tblView;
 @synthesize tblData;
 
-- (void)dealloc {
-  [tblView release];
-  [tblData release];
-  [super dealloc];
-}
 
 - (void)loadView {
   
   UIView *mainView = [[UIView alloc] initWithFrame:CGRectZero];
   
-  self.tblView = [[[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain] autorelease];
+  self.tblView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
   
   self.tblView.dataSource = self;
   self.tblView.delegate   = self;
   
   self.view = mainView;
   
-  [mainView release];
   
   [self.view addSubview:self.tblView];
   
@@ -76,7 +70,7 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   if (cell == nil) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
   }
   
   cell.textLabel.text = [self.tblData objectAtIndex:indexPath.row];

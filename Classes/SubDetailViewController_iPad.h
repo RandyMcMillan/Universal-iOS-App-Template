@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "SubDetailViewController.h"
 
-@interface SubDetailViewController_iPad : SubDetailViewController {
-    
-}
-
+@interface SubDetailViewController_iPad : SubDetailViewController
 @end

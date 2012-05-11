@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "Model.h"
 
-@interface RootViewController : UITableViewController {
-
-}
-
+@interface RootViewController : UITableViewController
 @end
