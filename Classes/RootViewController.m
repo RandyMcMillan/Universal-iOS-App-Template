@@ -10,13 +10,15 @@
 
 @implementation RootViewController
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
 
-#pragma mark -
-#pragma mark Table view data source
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
