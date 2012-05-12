@@ -58,8 +58,7 @@
 }
 
 - (void)viewDidUnload {
-  self.toolbar = nil;
-  self.tblView = nil;
+  [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
