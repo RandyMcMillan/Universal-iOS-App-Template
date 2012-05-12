@@ -11,6 +11,21 @@
 
 @implementation RootViewController_Pad
 
+- (id)initWithStyle:(UITableViewStyle)style {
+  
+  self = [super initWithStyle:style];
+  
+  if (self) {
+    
+  }
+  
+  return self;
+}
+
+- (void) viewDidLoad {
+  [super viewDidLoad];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
