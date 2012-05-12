@@ -18,10 +18,10 @@
 #pragma mark View lifecycle
 
 - (void)loadView {
+
+  UIView *mainParentView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
   
-  UIView *mainParentView = [[UIView alloc] initWithFrame:CGRectZero];
-  
-  self.tblView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+  self.tblView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
   
   self.tblView.dataSource = self;
   self.tblView.delegate   = self;
