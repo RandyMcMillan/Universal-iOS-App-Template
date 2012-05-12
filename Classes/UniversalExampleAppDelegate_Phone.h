@@ -9,13 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UniversalExampleAppDelegate_Phone : NSObject {
-  
-  UIWindow *window;
-  UINavigationController *navigationController;
-}
+@interface UniversalExampleAppDelegate_Phone : NSObject
 
-@property (nonatomic) IBOutlet UIWindow *window;
-@property (nonatomic) IBOutlet UINavigationController *navigationController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end
